@@ -36,6 +36,8 @@ ARocket::ARocket()
 void ARocket::BeginPlay()
 {
 	Super::BeginPlay();
+
+	SetLifeSpan(3.0f);
 	
 }
 
