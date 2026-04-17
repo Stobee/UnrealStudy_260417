@@ -74,6 +74,7 @@ void AP38Pawn::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	OnActorBeginOverlap.AddDynamic(this, &AP38Pawn::ProcessBeginOverlap);
 }
 
 // Called every frame
@@ -125,5 +126,9 @@ void AP38Pawn::Boost()
 void AP38Pawn::UnBoost()
 {
 	BoostValue = 0.5f;
+}
+
+void AP38Pawn::ProcessBeginOverlap(AActor* OverlappedActor, AActor* OtherActor)
+{
 }
 

@@ -79,6 +79,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Move")
 	float BoostValue = 0.5;
 
-
+	UFUNCTION(BlueprintCallable)
+	void ProcessBeginOverlap(AActor* OverlappedActor, AActor* OtherActor);
 
 };
